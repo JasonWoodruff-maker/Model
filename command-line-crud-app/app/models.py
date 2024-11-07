@@ -4,10 +4,10 @@ class Char(models.Model):
     item = models.TextField()
     in_out = models.BooleanField()
 # Create your models here.
-def create(name, item, in_out):
+def create_Char(name, item, in_out):
     n = Char(name=name, item=item, in_out=in_out)
     n.save()
-    return None
+    return n
 
 def view_all():
     return Char.objects.all()
